@@ -15,7 +15,7 @@ function listar() {
         for (const i in tablaGame) {
             var varGame = JSON.parse(tablaGame[i]);
             dataFila += "<tr>";
-            dataFila += "<td>" + varGame.idjuego + "</td>";
+            dataFila += "<td>" + varGame.idJuego + "</td>";
             dataFila += "<td>" + varGame.nombre_juego + "</td>";
             dataFila += "<td>" + varGame.nombre_titular + "</td>";
             dataFila += "<td>" + varGame.empresa + "</td>";
