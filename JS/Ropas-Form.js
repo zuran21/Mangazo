@@ -46,7 +46,7 @@ function guardar() {
             } else {
                 RopaTable.push(objRopa);
             }
-            localStorage.setItem("tablaPacienteStorage", JSON.stringify(RopaTable));
+            localStorage.setItem("RopaTableStorage", JSON.stringify(RopaTable));
 
 
             Swal.fire('Se guardaron los datos !', '', 'success').then((result) => {

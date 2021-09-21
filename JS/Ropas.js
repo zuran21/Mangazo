@@ -15,7 +15,7 @@ function Datarg() {
         for (const i in RopaTable) {
             var prenda = JSON.parse(RopaTable[i]);
             dataRopa += "<tr>";
-            dataRopa += "<td>" + prenda.idRopa+ "</td>";
+            dataRopa += "<td>" + prenda.IdRopa+ "</td>";
             dataRopa += "<td>" + prenda.Codigo+ "</td>";
             dataRopa += "<td>" + prenda.nomProducto + "</td>";
             dataRopa += "<td>" + prenda.tipoRopa + "</td>";
@@ -23,7 +23,7 @@ function Datarg() {
             dataRopa += "<td>" + prenda.estado + "</td>";
             dataRopa += "<td>" +
                 "<button type='button' class='btn btn-warning' onclick='Registro(" +
-                prenda.idRopa
+                prenda.IdRopa
                 + ")'>EDITAR</button>"
             "</td>"
 
