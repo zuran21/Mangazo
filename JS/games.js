@@ -23,7 +23,7 @@ function listar() {
             dataFila += "<td>" + varGame.estado + "</td>";
             dataFila += "<td>" +
                 "<button type='button' class='btn btn-warning' onclick='abrirForm(" +
-                varGame.IdJuego
+                varGame.idJuego
                 + ")'>EDITAR</button>"
             "</td>"
 
@@ -35,5 +35,5 @@ function listar() {
 
 function abrirForm(idForm) {
     localStorage.setItem("idForm", JSON.stringify(idForm));
-    window.location.replace("gamee-form.html"); // REDIRECCIONA A LA PAGINA pacientes.html
+    window.location.replace("game-form.html"); // REDIRECCIONA A LA PAGINA pacientes.html
 }
