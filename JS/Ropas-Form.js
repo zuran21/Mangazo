@@ -1,7 +1,7 @@
-var tablaPaciente = localStorage.getItem("tablaPacienteStorage"); // CREA VARIABLE
-tablaPaciente = JSON.parse(tablaPaciente);                        // TRANSFORMA A UNA VARIABLE JAVASCRIPT
-if (tablaPaciente == null) {
-    tablaPaciente = [];
+var RopaTable = localStorage.getItem("RopaTableStorage"); // CREA VARIABLE
+RopaTable = JSON.parse(RopaTable);                        // TRANSFORMA A UNA VARIABLE JAVASCRIPT
+if (RopaTable == null) {
+    RopaTable = [];
 }
 
 var IdRegistro = localStorage.getItem("IdRegistro");
@@ -9,7 +9,7 @@ IdRegistro = JSON.parse(IdRegistro);
 if (IdRegistro == null) {
     IdRegistro = 0;
 }
-
+IdRegistro
 cargarPagina();
 
 function guardar() {
@@ -23,11 +23,11 @@ function guardar() {
         /* Read more about isConfirmed, isDenied below */
         if (result.isConfirmed) {
             var objRopa = JSON.stringify({
-                IdRopa: (IdRegistro > 0) ? IdRegistro : (tablaPaciente.length + 1),
-                nombApellido: document.getElementById("txtCodigoP").value,
-                dni: document.getElementById("txtModelo").value,
-                telefono: document.getElementById("txtTipoRopa").value,
-                direccion: document.getElementById("txtCantidad").value,
+                IdRopa: (IdRegistro > 0) ? IdRegistro : (RopaTable.length + 1),
+                Codigo: document.getElementById("txtCodigoP").value,
+                nomProducto: document.getElementById("txtModelo").value,
+                tipoRopa: document.getElementById("txtTipoRopa").value,
+                Cantidad: document.getElementById("txtCantidad").value,
                 estado: document.getElementById("cboEstado").value
             });
 
@@ -36,17 +36,17 @@ function guardar() {
             //GUARDAMOS EN LOCAL STORAGE
             // AGREGA EL OBJETO A LA VARIABLA TABLAPACIENTE
             if (IdRegistro > 0) {
-                for (const i in tablaPaciente) {
-                    var varPaciente = JSON.parse(tablaPaciente[i]);
-                    if (varPaciente.idPaciente ==IdRegistro) {
-                        tablaPaciente[i] = objRopa;
+                for (const i in RopaTable) {
+                    var varPaciente = JSON.parse(RopaTable[i]);
+                    if (varPaciente.IdRopa ==IdRegistro) {
+                        RopaTable[i] = objRopa;
                         break;
                     }
                 }
             } else {
-                tablaPaciente.push(objRopa);
+                RopaTable.push(objRopa);
             }
-            localStorage.setItem("tablaPacienteStorage", JSON.stringify(tablaPaciente));
+            localStorage.setItem("tablaPacienteStorage", JSON.stringify(RopaTable));
 
 
             Swal.fire('Se guardaron los datos !', '', 'success').then((result) => {
@@ -61,14 +61,14 @@ function guardar() {
 
 function cargarPagina() {
     if (IdRegistro > 0) {
-        for (const i in tablaPaciente) {
-            var varPaciente = JSON.parse(tablaPaciente[i]);
-            if (varPaciente.idPaciente == IdRegistro) {
-                document.getElementById("txtIdRopa").value = varPaciente.idPaciente;
-                document.getElementById("txtCodigoP").value = varPaciente.nombApellido;
-                document.getElementById("txtModelo").value = varPaciente.dni;
-                document.getElementById("txtTipoRopa").value = varPaciente.telefono;
-                document.getElementById("txtCantidad").value = varPaciente.direccion;
+        for (const i in RopaTable) {
+            var varPaciente = JSON.parse(RopaTable[i]);
+            if (varPaciente.IdRopa == IdRegistro) {
+                document.getElementById("txtIdRopa").value = varPaciente.IdRopa;
+                document.getElementById("txtCodigoP").value = varPaciente.Codigo;
+                document.getElementById("txtModelo").value = varPaciente.nomProducto;
+                document.getElementById("txtTipoRopa").value = varPaciente.tipoRopa;
+                document.getElementById("txtCantidad").value = varPaciente.Cantidad;
                 document.getElementById("cboEstado").value = varPaciente.estado;
                 break;
             }

@@ -22,7 +22,7 @@ function Datarg() {
             dataRopa += "<td>" + prenda.Cantidad + "</td>";
             dataRopa += "<td>" + prenda.estado + "</td>";
             dataRopa += "<td>" +
-                "<button type='button' class='btn btn-warning' onclick='abrirForm(" +
+                "<button type='button' class='btn btn-warning' onclick='Registro(" +
                 prenda.idRopa
                 + ")'>EDITAR</button>"
             "</td>"
