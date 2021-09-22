@@ -28,7 +28,7 @@ function guardar() {
                 categoria: document.getElementById("txtCATEGORIA").value,
                 precio: document.getElementById("txtPRECIO").value,
                 descuento: document.getElementById("cboDESCUENTO").value, 
-                stop: document.getElementById("cboSTOP").value
+                stock: document.getElementById("cboSTOCK").value
                 
             });
 
@@ -68,7 +68,7 @@ function cargarPagina() {
                 document.getElementById("txtCATEGORIA").value = varMerchan.categoria;
                 document.getElementById("txtPRECIO").value = varMerchan.precio;
                 document.getElementById("cboDESCUENTO").value = varMerchan.descuento;
-                document.getElementById("cboSTOP").value = varMerchan.stop;
+                document.getElementById("cboSTOCK").value = varMerchan.stock;
                 break; //break,es detener la ejecución de un bucle y salirse de él.
             }
         }

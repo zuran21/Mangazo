@@ -20,7 +20,7 @@ function listar() {
             dataFila += "<td>" + varMerchan.categoria + "</td>";
             dataFila += "<td>" + varMerchan.precio + "</td>";
             dataFila += "<td>" + varMerchan.descuento + "</td>";
-            dataFila += "<td>" + varMerchan.stop + "</td>";
+            dataFila += "<td>" + varMerchan.stock + "</td>";
             dataFila += "<td>" +
                 "<button type='button' class='btn btn-warning' onclick='abrirForm(" +
                 varMerchan.Iddelproducto
