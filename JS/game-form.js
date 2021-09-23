@@ -75,3 +75,31 @@ function cargarPagina() {
         }
     }
 }
+
+function enviar() {
+    alert("enviar data...procesada");
+}
+
+function valida()
+{
+	if (window.event.keyCode<48 || window.event.keyCode>57)
+	{
+			alert("Solo ingresar números");
+			event.returnValue = false;
+	}
+}
+function validanombre(){
+    if (window.event.keyCode<65 || window.event.keyCode>90 && window.event.keyCode<97 || window.event.keyCode>122 )
+        {
+            alert("Solo ingresar letras");
+            event.returnValue = false;
+        }
+    }
+    function validacaracter()
+    {
+        if (window.event.keyCode<32 || window.event.keyCode>33 && window.event.keyCode<48 || window.event.keyCode>57 && window.event.keyCode<65 || window.event.keyCode>90 && window.event.keyCode<97 || window.event.keyCode>122)
+        {
+                alert("Solo ingresar numeros o letras");
+                event.returnValue = false;
+        }
+    }
