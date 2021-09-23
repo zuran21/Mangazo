@@ -1,6 +1,6 @@
 var tablaMerchan = localStorage.getItem("tablaMerchanStorage"); // CREA VARIABLE
 tablaMerchan = JSON.parse(tablaMerchan); // TRANSFORMA A UNA VARIABLE JAVASCRIPT
-if (tablaMerchan == null) { // para que no quede vacio
+if (tablaMerchan == null) { // null para que no quede vacio
     tablaMerchan = [];
 }
 
@@ -13,19 +13,19 @@ if (idForm == null) {
 cargarPagina();
 
 function guardar() {
-    Swal.fire({ // para guardar alertas personalisadas
+    Swal.fire({ // swal, es para guardar alertas personalisadas
         title: 'GUARDAR',
         html: ' DESEA GUARDAR CAMBIOS?',
         showDenyButton: true,
         confirmButtonText: 'SI',
         denyButtonText: `NO`,
-    }).then((result) => {
+    }).then((result) => { 
         /* Read more about isConfirmed, isDenied below */
-        if (result.isConfirmed) {
-            var objMerchan = JSON.stringify({ //convierte un valor de Js en una cadena de texto
+        if (result.isConfirmed) { 
+            var objMerchan = JSON.stringify({ //stringify, convierte un valor de Js en una cadena de texto
                 Iddelproducto: (idForm > 0) ? idForm : (tablaMerchan.length + 1),
                 nombredelproducto: document.getElementById("txtNOMBREDELPRODUCTO").value,
-                categoria: document.getElementById("txtCATEGORIA").value,
+                modelo: document.getElementById("txtMODELO").value,
                 precio: document.getElementById("txtPRECIO").value,
                 descuento: document.getElementById("cboDESCUENTO").value, 
                 stock: document.getElementById("cboSTOCK").value
@@ -65,7 +65,7 @@ function cargarPagina() {
             if (varMerchan.Iddelproducto == idForm) {
                 document.getElementById("txtIDDELPRODUCTO").value = varMerchan.Iddelproducto;
                 document.getElementById("txtNOMBREDELPRODUCTO").value = varMerchan.nombredelproducto;
-                document.getElementById("txtCATEGORIA").value = varMerchan.categoria;
+                document.getElementById("txtMODELO").value = varMerchan.modelo;
                 document.getElementById("txtPRECIO").value = varMerchan.precio;
                 document.getElementById("cboDESCUENTO").value = varMerchan.descuento;
                 document.getElementById("cboSTOCK").value = varMerchan.stock;
