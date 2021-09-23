@@ -11,8 +11,15 @@ body{
     color: aliceblue;
 }
 .container{
-    color: aliceblue;
+
+    color: rgb(0, 68, 102);
 }
 #color1, #color2, #color3, #color4, #color5{
     color: rgb(117, 146, 172);
 }
+.card{
+    color: rgb(30, 100, 162);
+}
+#submenus{
+    color: rgb(30, 100, 162);
+    font-family: 'Abril Fatface', cursive;
