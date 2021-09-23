@@ -3,11 +3,11 @@ RopaTable = JSON.parse(RopaTable);
 if (RopaTable == null) {
     RopaTable = [];
 }
-Datarg();
+Datarg();//permite que se ejecute automaticamente sin necesidad de usar el boton buscar
 
 
 
-function Datarg() {
+function Datarg() {//funcion para obtener los elementos  en tabla
     console.log("Datarg...");
 
     var dataRopa = '';
