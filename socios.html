@@ -1,69 +1,72 @@
 <!DOCTYPE html>
-<html  lang = " en " >
-<cabeza>
-  <link  rel = " preconnect " href = " https://fonts.googleapis.com ">
-<link  rel = " preconnect " href = " https://fonts.gstatic.com " crossorigin >
-<link  href = " https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap " rel = " hoja de estilo " >
-  <ítulo > Socios  </título >
-  <meta  charset = " utf-8 " >
-  <meta  name = " viewport " content = " width = device-width, initial-scale = 1 " >
-  <link  rel = " stylesheet " href = " https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css " >
-  <script  src = " https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js " > </script>
-  <script  src = " https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js " > </script>
-  <script  src = " https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js " > </script>
-  <! - <link rel = "stylesheet" href = "estilos.css"> ->
-</abeza>
-<cuerpo>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+  <title>Juegos</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!--<link rel="stylesheet" href="estilos.css">-->
+</head>
+<body>
 
-<div  id = fonts  class = " contenedor navbar navbar-expand-sm bg-dark text-white navbar-dark " >
-  <h2 >Nous Arcade</h2>
-  <ul  class = " nav nav-pildoras ">
-    <li  class = " nav-item ">
-     <!-<a class = "nav-link" href = "#"> </a>->
-    </li >
-    <li  class = " menú desplegable de elementos de navegación " >
-      <Una  clase = " nav-enlace-desplegable de palanca " datos de palanca "= desplegable " href =" # " > Nuevo registro </a>
-      <div  class = " menú desplegable bg-dark navbar-dark " >
-        <Un  ID = color1  clase = " desplegable ítems " href =" # " > Registro de juegos</a>
-        <Un  ID = color2  clase = " desplegable ítems " href =" # " > Merchandasing </a>
-        <Un  ID = color3  clase = " desplegable ítems " href =" # " > Ropa </a>
-        <Un  ID = color4  clase = " desplegable ítems " href =" # " > Patrocinadores </a>
-        <Un  ID = color5  clase = " desplegable ítems " href =" socios.hmtl " > Socios </a >
-      </div >
+<div id=fonts class="container navbar navbar-expand-sm bg-dark text-white navbar-dark">
+  <h2>Nous Arcade</h2>
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+     <!--<a class="nav-link " href="#">Active</a>-->
     </li>
-    <iclass = " nav-item " >
-      <Una  clase = " nav-link " href =" # " > Enlace </a >
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Nuevo Registro</a>
+      <div class="dropdown-menu bg-dark navbar-dark">
+        <a id=color1 class="dropdown-item" href="#">Registro de juegos</a>
+        <a id=color2 class="dropdown-item" href="#">Merchandasing</a>
+        <a id=color3 class="dropdown-item" href="Ropa.html">Ropa</a>
+        <a id=color4 class="dropdown-item" href="#">Patrocinadores</a>
+        <a id=color5 class="dropdown-item" href="socios.html">Socios</a>
+      </div>
     </li>
-    <li  class = " nav-item " >
-      <Una  clase = " nav-enlace con discapacidad " href =" # " > Desactivado </a >
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" href="#">Disabled</a>
     </li>
   </ul>
 </div>
 
-<div  class = " contenedor " >
-    <h1 > Lista de nuestros Socios </h1>
-    <div  class = " fila " >
-        <Un  href = " socios-form.html " clase =" btn btn-info m-1 " > NUEVO </a >
-        <button  type = " button " class = " btn btn-primary m-1 " onclick = " listar () " > BUSCAR </button >
+<div class="container">
+    <h1>LISTA DE SOCIOS</h1>
+    <div class="row">
+        <a href="socios-form.html" class="btn btn-info m-1">NUEVO</a>
+        <button type="button" class="btn btn-primary m-1" onclick="listar()">BUSCAR</button>
+       
+          
 
-        <Mesa de  clase = " mesa de ping-bordeado " ID =" tablasocios " >
-            <thead >
-                <tr >
-                    <td > Nombres  </td >
-                    <td > Apellidos </d >
-                    <td > DNI  </td >
-                    <td > Direccion  </td >
-                    <td > Numero de contacto </td >
-                    <td > Medio de contacto </td >
+        <table class="table table-bordered" id="tablaGame">
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>Nombres</td>
+                    <td>Apellidos</td>
+                    <td>DNI</td>
+                    <td>Direccion </td>
+                    <td></td>
+            
                 </tr>
-            </thead >
-            <tbody  id = " datasocios " >
-            </tbody >
-        </tabla >
-    </div >
-</div >
+            </thead>
+            <tbody id="dataGames">
+            </tbody>
+        </table>
+    </div>
+</div>
 
-</cuerpo >
-</html >
+</body>
+</html>
 
-<script  src = " socios.js " type = " text / javascript " > </script>
+<script src="./JS/socios.js" type="text/javascript"></script>
