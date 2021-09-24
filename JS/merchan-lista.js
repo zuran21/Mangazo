@@ -8,7 +8,7 @@ listar();
 
 
 function listar() { 
-    console.log("Ingresando a listar..."); //console.log, Muestra un mensaje en la consola web 
+    console.log("Ingresando a listar..."); //console.log, Para mensajes generales de registro de información.
 
     var dataFila = '';
     if (tablaMerchan.length > 0) {
