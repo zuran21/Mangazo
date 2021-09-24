@@ -1,5 +1,7 @@
 body{
+
     background-image: url(IMG/fondo5.jpg);
+
     
     background-size: cover;
     background-repeat: no-repeat;
@@ -22,6 +24,7 @@ body{
 }
 #submenus{
     color: rgb(30, 100, 162);
+
     font-family: 'Abril Fatface', cursive;
 }
 h1{
