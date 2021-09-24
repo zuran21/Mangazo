@@ -1,7 +1,7 @@
 var tablaMerchan = localStorage.getItem("tablaMerchanStorage"); // CREA VARIABLE
 tablaMerchan = JSON.parse(tablaMerchan); // TRANSFORMA A UNA VARIABLE JAVASCRIPT
-if (tablaMerchan == null) { // null para que no quede vacio
-    tablaMerchan = [];
+if (tablaMerchan == null) { 
+    tablaMerchan = [];//para que no quede vacio
 }
 
 var idForm = localStorage.getItem("idForm"); //localStorage almacena la información de forma indefinida
@@ -17,8 +17,8 @@ function guardar() {
         title: 'GUARDAR',
         html: ' DESEA GUARDAR CAMBIOS?',
         showDenyButton: true,
-        confirmButtonText: 'SI',
-        denyButtonText: `NO`,
+        confirmButtonText: 'SI', // saldran un mensaje SE GUARDARON LOS DATOS
+        denyButtonText: `NO`,// saldra un mensaje CAMBIOS NO GUARDADOS
     }).then((result) => { 
         /* Read more about isConfirmed, isDenied below */
         if (result.isConfirmed) { 
@@ -36,8 +36,8 @@ function guardar() {
 
             //GUARDAMOS EN LOCAL STORAGE
             // AGREGA EL OBJETO A LA VARIABLE tablaMerchan
-            if (idForm > 0) {
-                for (const i in tablaMerchan) {
+            if (idForm > 0) { // Si es 0 es por que estamos agregando un nuevo registro
+                for (const i in tablaMerchan) { //i, indice
                     var varMerchan = JSON.parse(tablaMerchan[i]);
                     if (varMerchan.Iddelproducto == idForm) {
                         tablaMerchan[i] = objMerchan;
@@ -52,7 +52,7 @@ function guardar() {
                 window.location.replace("merchan-lista.html"); // REDIRECCIONA A LA PAGINA merchan-lista
             })
         } else if (result.isDenied) {
-            Swal.fire('Cambios no Guardados', '', 'info')
+            Swal.fire('Cambios no Guardados', '', 'info')// swal, es para guardar alertas personalisadas
         }
     });
 
