@@ -47,8 +47,14 @@
       <div class="card-body">
         <h1>LISTA DE JUEGOS</h1>
         <div class="row">
-          <a href="game-form.html" class="btn btn-info m-1">NUEVO</a>
-          <button type="button" class="btn btn-primary m-1" onclick="listar()">BUSCAR</button>
+          <!--<a href="game-form.html" class="btn btn-info m-1">NUEVO</a>-->
+          <!--<button type="button" class="btn btn-primary m-1" onclick="listar(0)">BUSCAR</button>-->
+          <button type="button" class="btn btn-info m-1" onclick="abrirForm(0)">
+            NUEVO
+        </button>
+        <button type="button" class="btn btn-primary m-1" onclick="listar()">
+            BUSCAR
+        </button>
 
           <table class="table table-bordered" id="tablaGame">
             <thead>
