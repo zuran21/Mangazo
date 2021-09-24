@@ -31,7 +31,7 @@ function guardar() {
                 estado: document.getElementById("cboEstado").value
             });
 
-            //console.log(objPaciente);
+            //console.log(registro);
 
             //GUARDAMOS EN LOCAL STORAGE
             // AGREGA EL OBJETO A LA VARIABLA TABLAPACIENTE
