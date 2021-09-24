@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+      <title>NousArcade</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="estilos.css">
+      <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    
+    <div class="container1"> <!--div, sirve para crear secciones o agrupar contenidos -->
+        <div class="card"> <!--class, para seleccionar y acceder a elementos específicos a través de los selectores de clase js, css-->
+            <div class="card-header"> <h2>MERCHANDASING</h2> </div>
+            <div class="card-body">
+                <form id="merchan-form">
+                    
+                    <div class="form-group">
+                        <label for="txtIDDELPRODUCTO">ID DEL PRODUCTO</label>
+                        <input type="text" class="form-control" id="txtIDDELPRODUCTO" value="0" readonly />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="txtNOMBREDELPRODUCTO">NOMBRE DEL PRODUCTO</label>
+                        <input type="text" maxlength="20" class="form-control" placeholder="Escribe el nombre del producto" id="txtNOMBREDELPRODUCTO" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="txtMODELO">MODELO</label>
+                        <input type="text" maxlength="20" class="form-control" placeholder="Escribe el modelo del producto" id="txtMODELO" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="txtPRECIO">PRECIO</label>
+                        <input type="text" type="dolar" maxlength="12" class="form-control" placeholder="Escribe el precio del producto" id="txtPRECIO" />
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="cboDESCUENTO">DESCUENTO</label>
+                        <select class="form-control" id="cboDESCUENTO">
+                            <option>0%</option>
+                            <option>10%</option>
+                            <option>20%</option>
+                            <option>30%</option>
+                            <option>40%</option>
+                            <option>50%</option>
+                            <option>60%</option>
+                            <option>70%</option>
+                            <option>80%</option>
+                            <option>90%</option>
+                            <option>100%</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cboSTOCK">STOCK</label>
+                        <select class="form-control" id="cboSTOCK">
+                            <option>DISPONIBLE</option>
+                            <option>NO DISPONIBLE</option>
+                        </select>
+                    </div>
+
+                </form>
+            </div>
+            <div class="card-footer">
+                <button type="button" class="btn btn-success" onclick="guardar()">GUARDAR</button>
+                <a href="merchan-lista.html" class="btn btn-danger">CANCELAR</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="JS/merchan-form.js" type="text/javascript"></script>

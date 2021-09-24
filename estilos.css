@@ -14,7 +14,12 @@ body{
 }
 .container{
 
-    color: rgb(0, 68, 102);
+    color: aliceblue;
+
+}
+h4{
+    color:black;
+
 }
 #color1, #color2, #color3, #color4, #color5{
     color: rgb(117, 146, 172);
