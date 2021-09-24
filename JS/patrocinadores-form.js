@@ -1,6 +1,6 @@
 var RopaTable = localStorage.getItem("RopaTableStorage"); // CREA VARIABLE
 RopaTable = JSON.parse(RopaTable);                        // TRANSFORMA A UNA VARIABLE JAVASCRIPT
-if (RopaTable == null) {    // null para que no quede vacio
+if (RopaTable == null) {
     RopaTable = [];
 }
 
@@ -50,7 +50,7 @@ function guardar() {
 
 
             Swal.fire('Se guardaron los datos !', '', 'success').then((result) => {
-                window.location.replace("Ropas.html"); // REDIRECCIONA A LA PAGINA pacientes.html
+                window.location.replace("patrocinadores.html"); // REDIRECCIONA A LA PAGINA pacientes.html
             })
         } else if (result.isDenied) {
             Swal.fire('Cambios no Guardados', '', 'info')

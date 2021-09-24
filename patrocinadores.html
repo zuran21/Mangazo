@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
-  <title>Bootstrap Example</title>
+  <title>Registro de Ropa</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -18,9 +17,7 @@
 <body>
 
 <div id=fonts class="container navbar navbar-expand-sm bg-dark text-white navbar-dark">
-
   <a href="NousArcade.html"> <h2>Nous Arcade</h2></a>
-
   <ul class="nav nav-pills">
     <li class="nav-item">
      <!--<a class="nav-link " href="#">Active</a>-->
@@ -36,13 +33,49 @@
       </div>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
+      <a class="nav-link" href="#">Enlaces</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link disabled" href="#">Disabled</a>
+      <a class="nav-link disabled" href="#">Sucursales</a>
     </li>
   </ul>
 </div>
 
+<!--Nav bar ropa-->
+<div class="container">
+  <div class="card"> 
+    <div class="card-body"> 
+
+    <h1>LISTA REGISTRO DE PATROCINADORES</h1>
+    <div class="row">
+        <button type="button" class="btn btn-info m-1" onclick="Registro(0)">
+            NUEVO
+        </button>
+        <button type="button" class="btn btn-primary m-1" onclick="Datarg()"><!-- boton buscar con elemento  datarg onclick-->
+            BUSCAR
+        </button>
+        <table class="table table-bordered" id="RopaTable">
+            <thead>
+                <tr id="submenus">
+                    <td>ID-Cliente</td><!--id de la prenda-->
+                    <td>CODIGO</td><!--CODIGO de la prenda-->
+                    <td>Nombre de la empresa</td><!--nombre de la prenda-->
+                    <td>CLASIFICACION DE SOCIO</td><!--CLASE de la prenda polo, casaca, etc-->
+                    <td>MONTO DE ABONO </td><!--numero de prendas a ingresar-->
+                    <td>ESTADO</td><!--Disponibilidad de la prenda-->
+                    <td>ACCIONES</td><!--disponibilidad-->
+                </tr>
+            </thead>
+            <tbody id="infoRopa">
+
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>   
+</div>
+
+
 </body>
 </html>
+<script src="/JS/patrocinadores.js" type="text/javascript"></script>
