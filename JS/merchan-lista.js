@@ -29,8 +29,8 @@ function listar() {
 
             dataFila += "</tr>";
         }
-        document.getElementById("dataMerchan").innerHTML = dataFila;// getElementById, seleccionar un elemento del documento por medio del valor del atributo id que se le haya asignado
-    }
+        document.getElementById("dataMerchan").innerHTML = dataFila;// getElementById, selecciona un elemento del documento por medio del valor del atributo id que se le haya asignado
+    }// innerHTML, Nos facilita la asignación de valores a controles
 }
 
 function abrirForm(idForm) {
