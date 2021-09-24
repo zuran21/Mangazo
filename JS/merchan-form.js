@@ -1,9 +1,9 @@
 var tablaMerchan = localStorage.getItem("tablaMerchanStorage"); // CREA VARIABLE
 tablaMerchan = JSON.parse(tablaMerchan); // TRANSFORMA A UNA VARIABLE JAVASCRIPT
 if (tablaMerchan == null) { 
-    tablaMerchan = [];//para que no quede vacio
+    tablaMerchan = [];  //Es para cuando este vacio, no se ponga nada.
 }
-
+                                            // getItem, devuelve el valor de la clave cuyo nombre se le pasa por parámetro.
 var idForm = localStorage.getItem("idForm"); //localStorage almacena la información de forma indefinida
 idForm = JSON.parse(idForm); // JSON para almacenar e intercambiar información de texto
 if (idForm == null) {
@@ -25,7 +25,7 @@ function guardar() {
             var objMerchan = JSON.stringify({ //stringify, convierte un valor de Js en una cadena de texto
                 Iddelproducto: (idForm > 0) ? idForm : (tablaMerchan.length + 1),
                 nombredelproducto: document.getElementById("txtNOMBREDELPRODUCTO").value,
-                modelo: document.getElementById("txtMODELO").value,
+                modelo: document.getElementById("txtMODELO").value, //getElementById, devuelve el elemento que tiene el atributo ID con el valor especificad
                 precio: document.getElementById("txtPRECIO").value,
                 descuento: document.getElementById("cboDESCUENTO").value, 
                 stock: document.getElementById("cboSTOCK").value
@@ -35,11 +35,11 @@ function guardar() {
             //console.log(objMerchan);
 
             //GUARDAMOS EN LOCAL STORAGE
-            // AGREGA EL OBJETO A LA VARIABLE tablaMerchan
+            // AGREGA EL OBJETO A LA VARIABLE tablaMerch    an
             if (idForm > 0) { // Si es 0 es por que estamos agregando un nuevo registro
-                for (const i in tablaMerchan) { //i, indice
-                    var varMerchan = JSON.parse(tablaMerchan[i]);
-                    if (varMerchan.Iddelproducto == idForm) {
+                for (const i in tablaMerchan) { //for,  es una sentencia que implementa un bucle
+                    var varMerchan = (tablaMerchan[i]);//JSON.parse, analiza una cadena de texto
+                    if (varMerchan.Iddelproducto == idForm) {// if, es una estructura de control utilizada para tomar decisiones
                         tablaMerchan[i] = objMerchan;
                         break;
                     }
