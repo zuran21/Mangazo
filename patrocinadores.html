@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+      <title>NousArcade</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="estilos.css">
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.5/dist/sweetalert2.all.min.js"></script>
+</head>
+<body>
+    <div class="container">
+       <div class="card"> 
+        <div class="card-body"> 
+        <h4>EMPRESAS</h4>
+        <div class="row">
+            <button type="button" class="btn btn-info m-1" onclick="abrirForm(0)">
+                NUEVO
+            </button>
+            <button type="button" class="btn btn-info m-1" onclick="listar()">
+                BUSCAR
+            </button>
+            <table class="table table-bordered" id="tablapatrocinadores">
+                <thead>
+                    <tr>
+                        <td>ID EMPRESA</td>
+                        <td>NOMBRE DE LA EMPRESA</td>
+                        <td>REPRESENTANTE</td>
+                        <td>TIEMPO DE CONTRATO</td>
+                        <td>MONTO POR PATROCINIO</td>
+                        <td>ACCIONES</td>
+                    </tr>
+                </thead>
+                <tbody id="datapatrocinadores">
+
+                </tbody>
+            </table>
+           </div>
+          </div>
+       </div>
+  </div>
+
+</body>
+</html>
+<script src="JS/patrocinadores.js" type="text/javascript"></script>
