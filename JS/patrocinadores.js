@@ -22,7 +22,7 @@ function listar() {
             dataFila += "<td>" + varpatrocinadores.montoporpatrocinio + "</td>";
             dataFila += "<td>" +
                 "<button type='button' class='btn btn-warning' onclick='abrirForm(" + // se crea el boton de editar 
-                varpatrocinadores.Idempresa
+                varpatrocinadores.idempresa
                 + ")'>EDITAR</button>"
             "</td>"
 

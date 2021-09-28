@@ -23,7 +23,7 @@ function guardar() {
         /* Read more about isConfirmed, isDenied below */
         if (result.isConfirmed) { 
             var objpatrocinadores = JSON.stringify({ //stringify, convierte un valor de Js en una cadena de texto
-                Idempresa: (idForm > 0) ? idForm : (tablapatrocinadores.length + 1),
+                idempresa: (idForm > 0) ? idForm : (tablapatrocinadores.length + 1),
                 nombredelaempresa: document.getElementById("txtNOMBREDELAEMPRESA").value,
                 representante: document.getElementById("txtREPRESENTANTE").value,
                 tiempodecontrato: document.getElementById("txtTIEMPODECONTRATO").value,
@@ -62,7 +62,7 @@ function cargarPagina() {
         for (const i in tablapatrocinadores) {
             var varpatrocinadores = JSON.parse(tablapatrocinadores[i]);
             if (varpatrocinadores.idempresa == idForm) {
-                document.getElementById("txtIDEMPRESA").value = varpatrocinadores.Idempresa;
+                document.getElementById("txtIDEMPRESA").value = varpatrocinadores.idempresa;
                 document.getElementById("txtNOMBREDELAEMPRESA").value = varpatrocinadores.nombredelaempresa;
                 document.getElementById("txtREPRESENTANTE").value = varpatrocinadores.representante;
                 document.getElementById("txtTIEMPODECONTRATO").value = varpatrocinadores.tiempodecontrato;
