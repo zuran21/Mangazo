@@ -1,0 +1,24 @@
+.body{
+    background-image: url(/img/mili1.jpg);
+    background: url(/img/mili2.jpg);
+}
+
+.foto{
+    background: url(/img/mili1.jpg);
+}
+#foto1{
+    background-image: url(/img/mili1.jpg);
+    background: url(/img/mili2.jpg);
+
+}
+.head{
+    background-image: url(/img/mili1.jpg);
+    background: url(/img/mili2.jpg);
+}
+.foto22{
+    
+    image-orientation: inherit;
+    
+    float: right;
+    transform: rotate(-90deg);
+}

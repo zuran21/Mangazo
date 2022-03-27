@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>POS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <%- include('layout/menu'); %>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header text-center">
+                LISTA DE MERCADERIA/ROPA
+            </div>
+            <div class="card-body">
+                <a class="btn btn-success" href="/ropa/form/0">NUEVO</a>
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>ID-ROPA</th>
+                            <th>CODIGO DEL PRODUCTO</th>
+                            <th>MODELO</th>
+                            <th>TIPO</th>
+                            <th>CANTIDAD</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% if(dataRopas.length) { %>
+                            <% dataRopas.forEach( item => { %>
+                                <tr>
+                                    <td><%= item.id_ropa  %></td>
+                                    <td><%= item.Codigo  %></td>
+                                    <td><%= item.Modelo  %></td>
+                                    <td><%= item.Cantidad  %></td>
+                                    <td><%= item.Estado  %></td>
+                                </tr>
+                            <% })%>
+                        <% } %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

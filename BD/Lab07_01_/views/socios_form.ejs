@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>POS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/stilo.css">
+    <link rel="stylesheet" href="/JS/socio-Form.js">
+</head>
+<body>
+    <%- include('layout/menu'); %>
+    <div class="container mt-5">
+        
+            
+            
+                
+                <div class="container">
+                    <div class="card">
+                        <div class="card-header"> REGISTRO DEL SOCIO </div>
+                        <div class="card-body">
+                            <form id="frmPaciente">
+                                <div class="form-group">
+                                    <label for="txtIdSocios">ID-SOCIO</label>
+                                    <input type="text" class="form-control" id="txtidSocios" name= "idSocios" value="<%=sociosForm.idSocio %>" readonly />
+                                </div>
+            
+                                <div class="form-group">
+                                    <label for="txtCodigoP">CODIGO </label>
+                                    <input type="text" maxlength="20" onkeypress=validacaracter();  
+                                    name="codigo" class="form-control" id="txtCodigo" value="<%sociosForm.codigo %>" />
+                                </div>
+            
+                                <div class="form-group">
+                                    <label for="txtModelo">NOMBRE </label>
+                                    <input type="text" maxlength="20" onkeypress=validacaracter();
+                                     name=nombre  class="form-control" id="txtNombre" value="<%sociosForm.nombre %>" />
+                                </div>
+            
+                                <div class="form-group">
+                                    <label for="txtTipoSocios"> APELLIDOS </label>
+                                    <input type="text" maxlength="20" onkeypress=validanombre(); 
+                                    name=apellido  class="form-control" id="txtApellido" value="<%sociosForm.tipo %>" />
+                                </div>
+            
+            
+                                <div class="form-group">
+                                    <label for="txtCantidad">EMPRESA</label>
+                                    <input type="text" onKeyPress="valida()"
+                                      name="empresa" class="form-control" id="txtEmpresa" value="<%sociosForm.empresa %>" />
+                                </div>
+            
+                                <div class="form-group">
+                                    <label for="cboEstado">ESTADO</label>
+                                    <select class="form-control" id="cboEstado">
+                                        <option>ACTIVO</option>
+                                        <option>INACTIVO</option>
+                                    </select>
+                                </div>
+            
+                            </form>
+                        </div>
+                        <div class="card-footer">
+                            <button type="button" class="btn btn-success" onclick="guardar()">GUARDAR</button>
+                            <a href="socios.html" class="btn btn-danger">CANCELAR</a>
+                        </div>
+                    </div>
+                </div>
+            </body>
+            
+            </html>
+            <script src="/JS/socios-Form.js" type="text/javascript"></script>
+            
+        
+        
+</body>

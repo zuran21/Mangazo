@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>POS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/stilo.css">
+    <link rel="stylesheet" href="/JS/patrocinadores-form.js">
+</head>
+<body>
+    <%- include('layout/menu'); %>
+    <div class="container mt-5">
+        
+            
+            
+                
+                <div class="container">
+                    <div class="card">
+                        <div class="card-header"> REGISTRO DEL PRODUCTO</div>
+                        <div class="card-body">
+                            <form id="frmPaciente">
+                                <div class="form-group">
+                                    <label for="txtIdRopa">ID-</label>
+                                    <input type="text" class="form-control" id="txtIdRopa" name= "txtIdRopa" value="<%=patrocinadoresForm.idPatrocinadores %>" readonly />
+                                </div>
+            
+                                <div class="form-group">
+                                    <label for="txtCodigoP">CODIGO DEL LA EMPRESA</label>
+                                    <input type="text" maxlength="20" onkeypress=validacaracter();  
+                                    name="txtcod" class="form-control" id="txtCodigoP" value="<%patrocinadoresForm.codigop %>" />
+                                </div>
+            
+                                <div class="form-group">
+                                    <label for="txtModelo">NUMERO DE CLIENTE</label>
+                                    <input type="text" maxlength="20" onkeypress=validacaracter();
+                                     name=txtpat  class="form-control" id="txtModelo" value="<%patrocinadoresForm.modelo %>" />
+                                </div>
+            
+                                <div class="form-group">
+                                    <label for="txtTipoRopa">MONTO DE ABONO</label>
+                                    <input type="text" maxlength="20" onkeypress=validanombre(); 
+                                    name=txtpat  class="form-control" id="txtTipoRopa" value="<%patrocinadoresForm.tipo %>" />
+                                </div>
+            
+            
+                                <div class="form-group">
+                                    <label for="txtCantidad">CLASIFICACION DE SOCIO</label>
+                                    <input type="text" onKeyPress="valida()"
+                                      name="txtcod" class="form-control" id="txtCantidad" value="<%patrocinadoresForm.cantidad %>" />
+                                </div>
+            
+                                <div class="form-group">
+                                    <label for="cboEstado">ESTADO</label>
+                                    <select class="form-control" id="cboEstado">
+                                        <option>ACTIVO</option>
+                                        <option>INACTIVO</option>
+                                    </select>
+                                </div>
+            
+                            </form>
+                        </div>
+                        <div class="card-footer">
+                            <button type="button" class="btn btn-success" onclick="guardar()">GUARDAR</button>
+                            <a href="patrocinadores.html" class="btn btn-danger">CANCELAR</a>
+                        </div>
+                    </div>
+                </div>
+            </body>
+            
+            </html>
+            <script src="/JS/patrocinadores-form.js" type="text/javascript"></script>
+            
+        
+        
+</body>

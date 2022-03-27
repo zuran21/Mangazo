@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>POS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/stilo.css">
+    <link rel="stylesheet" href="/JS/Ropas-Form.js">
+</head>
+<body>
+    <%- include('layout/menu'); %>
+    <div class="container mt-5">
+        
+            
+            
+                
+                <div class="container">
+                    <div class="card">
+                        <div class="card-header"> REGISTRO DEL PRODUCTO </div>
+                        <div class="card-body">
+                            <form id="frmPaciente">
+                                <div class="form-group">
+                                    <label for="txtIdRopa">ID-ROPA</label>
+                                    <input type="text" class="form-control" id="txtidRopa" name= "idRopa" 
+                                    value="<%=ropaForm.idRopa %>" readonly />
+                                </div>
+            
+                                <div class="form-group">
+                                    <label for="txtCodigoP">CODIGO DEL PRODUCTO</label>
+                                    <input type="text" maxlength="20" onkeypress=validacaracter();  
+                                    name="codigop" class="form-control" id="txtCodigoP" 
+                                    value="<%ropaForm.codigop %>" />
+                                </div>
+            
+                                <div class="form-group">
+                                    <label for="txtModelo">MODELO DEL PRODUCTO</label>
+                                    <input type="text" maxlength="20" onkeypress=validacaracter();
+                                     name=modelo  class="form-control" id="txtModelo"
+                                      value="<%ropaForm.modelo %>" />
+                                </div>
+            
+                                <div class="form-group">
+                                    <label for="txtTipoRopa">TIPO DE ROPA</label>
+                                    <input type="text" maxlength="20" onkeypress=validanombre(); 
+                                    name=tipo  class="form-control" id="txtTipoRopa"
+                                     value="<%ropaForm.tipo %>" />
+                                </div>
+            
+            
+                                <div class="form-group">
+                                    <label for="txtCantidad">CANTIDAD</label>
+                                    <input type="text" onKeyPress="valida()"
+                                      name="cantidad" class="form-control" id="txtCantidad" value="<%ropaForm.cantidad %>" />
+                                </div>
+            
+                               
+            
+                            </form>
+                        </div>
+                        <div class="card-footer">
+                            <input type="submit" class="btn btn-success"
+                        value="GUARDAR">
+                        <a class="btn btn-danger" href="/ropa/list">CANCELAR</a>
+                        </div>
+                    </div>
+                </div>
+            </body>
+            
+            </html>
+            
+        
+        
+</body>
